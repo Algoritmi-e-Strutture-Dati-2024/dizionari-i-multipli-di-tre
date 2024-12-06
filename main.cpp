@@ -20,7 +20,7 @@ int main() {
     dict.cancella("car");
     std::cout << "esiste:" << dict.appartiene("apple") << std::endl;
     
-    dict.inserisci("book","object");
+    dict.inserisci("book","Mario");
 
     
     return 0;
