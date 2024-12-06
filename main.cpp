@@ -18,7 +18,9 @@ int main() {
 
     dict.stampa();
     dict.cancella("car");
-    dict.appartiene("apple");
+    std::cout << "esiste:" << dict.appartiene("apple") << std::endl;
+    
+    dict.inserisci("book","object");
 
     
     return 0;
