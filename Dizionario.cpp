@@ -66,7 +66,8 @@ public:
         int index=hashfunction(key);
         if (table[index].isOccupated && table[index].key=key){
             return true;
-        };
+        }
+        return false;
     
     }
 
