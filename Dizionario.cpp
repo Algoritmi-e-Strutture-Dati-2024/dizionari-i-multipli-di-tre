@@ -13,13 +13,13 @@ private:
     Entry table[TABLE_SIZE];
 
     // Funzione hash di base
-    int hashFunction(const std::string key) const {
-        int hash = 0;
-        for (char ch : key) {
-            hash = (hash * 31 + ch) % TABLE_SIZE; // Algoritmo di hashing semplice
-        }
-        return hash;
+  int hashFunction(const std::string& key) const {
+    int hash = 0;
+    for (char ch : key) {
+        hash += static_cast<int>(ch);
     }
+    return hash % TABLE_SIZE;
+}
 
 public:
     // Metodo per aggiungere una coppia chiave-valore
@@ -55,4 +55,21 @@ public:
             }
         }
     }
+    void cancella(const std::sting key){
+        int index=hashfunction(key);
+        table[index].isOccupated=false;
+    
+    }
+
+
+    bool appartiene(const std::string key){
+        int index=hashfunction(key);
+        if (table[index].isOccupated && table[index].key=key){
+            return true;
+        };
+    
+    }
+
+
+
 };
